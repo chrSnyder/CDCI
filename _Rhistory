@@ -1,0 +1,159 @@
+source('C:/Users/Administrator/Google Drive/CDCI/Analysis/TF.R')
+key
+source('C:/Users/Administrator/Google Drive/CDCI/Analysis/TF.R')
+source('C:/Users/Administrator/Google Drive/CDCI/Analysis/TF.R')
+key <- data.frame(Ans,numAns, row.names = QNames)
+key <- data.frame(Ans,numAns, row.names = QNames)
+source('C:/Users/Administrator/Google Drive/CDCI/Analysis/TF.R')
+getTF(data)
+source('C:/Users/Administrator/Google Drive/CDCI/Analysis/TF.R')
+getTF(data)
+getTF(data,key)
+source('C:/Users/Administrator/Google Drive/CDCI/Analysis/TF.R')
+getTF(data, key)
+source('C:/Users/Administrator/Google Drive/CDCI/Analysis/TF.R')
+getTF(data, key)
+source('C:/Users/Administrator/Google Drive/CDCI/Analysis/TF.R')
+groom(data, key)
+data
+source('C:/Users/Administrator/Google Drive/CDCI/Analysis/TF.R')
+# Christopher Snyder
+source('C:/Users/Administrator/Google Drive/CDCI/Analysis/CDCI-Analysis.R', echo=TRUE)
+source('C:/Users/Administrator/Google Drive/CDCI/Analysis/CDCI-Analysis.R', echo=TRUE)
+setwd("C:/Users/Administrator/Google Drive/CDCI/Analysis")
+source('C:/Users/Administrator/Google Drive/CDCI/Analysis/CDCI-Analysis.R', echo=TRUE)
+# Central Dogma Concept Inventory Analysis
+getTF(data)
+shiny::runApp()
+install.packages("swirl")
+library("swirl")
+swirl()
+install.packages("swirl")
+library("swirl")
+install.packages("stringi")
+library("swirl")
+swirl()
+5+7
+x <- 5+7
+x
+y <- x-3
+y
+z <- c(1.1, 9, 3.14)
+?c
+z
+c(z, 555,z)
+z*2+100
+scorePRT(data)
+getPRT(data)
+quit
+info()
+bye()
+datt <- getPRT(data)
+datt
+barplot(datt)
+datt <- c(datt)
+datt
+barplot(daa)
+barplot(datt)
+datt[Q1]
+datt[$q1]
+datt[$Q1]
+datt[1,]
+datt[1,1]
+datt[1,1,1]
+datt
+datt[1,1,1,1]
+datt[1]
+mean(datt[1])
+mean(  [1] 0.4 1.0 1.0 0.8 0.8 0.6 0.8 0.8 0.4 0.8 0.6 0.8 0.8 1.0 0.8 1.0 0.4 0.6 0.6 0.8 0.6 0.8 0.6
+[24] 0.8 0.8 0.8 0.6 1.0 1.0 1.0 0.4 0.8 0.6 0.6 0.2 0.4 0.6 0.6 0.6 0.4 0.8 1.0 0.6 0.6 0.8 0.8
+[47] 0.8 0.4 0.6 0.8 0.8 0.4 1.0 1.0 0.8 0.6 0.8 0.8 0.8 0.6 1.0 0.6 0.8 1.0 0.6 0.8 0.4 0.8 0.6
+[70] 1.0 0.4 0.4 0.6 0.4 0.6 0.4 0.2 0.8 0.8 0.4 0.8 0.2 0.4 0.4 0.8 0.4 0.8 0.8 0.4 0.4 0.4 0.2
+[93] 1.0 0.2 0.6 0.4 0.8 0.4 0.4 0.8 0.6)
+datt[1][1]
+datt[1][1][1]
+name(datt[1])
+cname(datt[1])
+avscores <- c()
+avscores
+rnames(avscores) <- Q1:Q23
+rnames(avscores) <- "Q1":"Q23"
+avscores
+rnames(avscores[1]) <- "Q1"
+rname(avscores[1]) <- "Q1"
+rownames(avscores) <- 1:23
+avscores[1] <- 0.65940594059406
+rownames(avscores[1]) <- "Q1"
+avscores
+barplot(avscores)
+qnames < c("Q1", "Q2", "Q3", "Q4", "Q5", "Q6", "Q7", "Q8", "Q9", "Q10", "Q11",  "Q12", "Q13", "Q14", "Q15",  "Q16",  "Q17", "Q18",  "Q19", "Q20", "Q21", "Q22", "Q23", "Score")
+qnames <- c("Q1", "Q2", "Q3", "Q4", "Q5", "Q6", "Q7", "Q8", "Q9", "Q10", "Q11",  "Q12", "Q13", "Q14", "Q15",  "Q16",  "Q17", "Q18",  "Q19", "Q20", "Q21", "Q22", "Q23", "Score")
+qnames
+avscores[2] <- 0.65980198019802
+avscores[3] <- 0.49752475247525
+avscores[4] <- 0.5470297029703
+avscores[5] <- 0.62871287128713
+avscores[6] <- 0.6039603960396
+avscores[7] <- 0.6039603960396
+avscores
+avscores[8] <- 0.72089108910891
+avscores[9] <- 0.82178217821782
+avscores[10] <- 0.61386138613861
+avscores
+avscores[11] <- 0.43564356435644
+avscores[12] <- 0.60891089108911
+avscores[13] <-0.56929347826087
+avscores
+avscores[14] <-0.75
+avscores[15] <-0.66534653465346
+avscores[16] <-0.67079207920792
+avscores[17] <-0.63920792079208
+avscores[18] <- 0.73267326732673
+avscores[19] <-0.64564356435644
+avscores[20] <- 0.68811881188119
+avscores[21] <-0.5990099009901
+avscores[22] <-0.51980198019802
+avscores[23] <- 0.65940594059406
+avscores[24] <- 63.436237623762
+plot(qnames, avscores)
+qnames <- [1:23]
+qnames <- 1:23
+qnames
+plot(qnames, avscores,  type="l")
+plot(qnames, avscores[1:23],  type="l")
+barplot(avscores[1:23])
+barplot(avscores, main="Average Partial Score by Question",
+xlab="Question Number")
+barplot(avscores[1:23], main="Average Partial Score by Question", xlab="Question Number")
+barplot(avscores[1:23], main="Average Partial Score by Question", xlab="Question Number", axes = TRUE)
+barplot(avscores[1:23], main="Average Partial Score by Question", xlab="Question Number", axes = TRUE, axisnames="true")
+barplot(avscores[1:23], main="Average Partial Score by Question", xlab="Question Number", axes = TRUE, axisnames = TRUE)
+barplot(avscores[1:23], main="Average Partial Score by Question", xlab="Question Number", axes = TRUE, horiz=TRUE)
+barplot(avscores[1:23], main="Average Partial Score by Question", xlab="Question Number", axes = TRUE, axisnames=TRUE, names.arg = 1:23)
+barplot(avscores[1:23], main="Average Partial Score by Question", xlab="Question Number", axes = TRUE, axisnames=TRUE, names.arg = 1:23, space=.3)
+barplot(avscores[1:23], main="Average Partial Score by Question", xlab="Question Number", axes = TRUE, axisnames=TRUE, names.arg = 1:23, space=.4)
+barplot(avscores[1:23], main="Average Partial Score by Question", xlab="Question Number", axes = TRUE, axisnames=TRUE, names.arg = 1:23, space=.3, las=2)
+runApp()
+barplot(avscores[1:23], main="Average Partial Score by Question", xlab="Question Number", axes = TRUE, axisnames=TRUE, names.arg = 1:23, space=.1, las=2)
+getTF(data)
+runApp()
+resp <- c("A","B","C","D","AB","AC","AD","BC","BD","CD","ABC","ABD","ACD","BCD","ABCD")
+resp
+vals <- c(10,0,1,3,0,2,5,0,1,2,0,1,2,2,6)
+vals
+boxplot(vals)
+barplot(vals)
+barplot(vals, names.args=resp)
+barpl
+barplot()
+barpl
+barplot(vals, names.arg=resp)
+barplot(vals, names.arg=resp, las=2)
+barplot(vals, main="Average Partial Score by Question", xlab="Question Number", axes = TRUE, axisnames=TRUE, names.arg=resp, las=2)
+barplot(vals, main="Average Partial Score by Question", xlab="Question Number", axes = TRUE, axisnames=TRUE, names.arg=resp, las=2)
+barplot(vals, main="Response Frequency", xlab="Response", ylab="Number of Students Selecting Response", axes = TRUE, axisnames=TRUE, names.arg=resp, las=2)
+colors = c("grey","grey","grey","grey","grey","red","grey","grey","grey","grey","grey","grey","grey","grey","grey",)
+colors <- c("grey","grey","grey","grey","grey","red","grey","grey","grey","grey","grey","grey","grey","grey","grey")
+colors
+barplot(vals, main="Response Frequency", xlab="Response", ylab="Number of Students Selecting Response", axes = TRUE, axisnames=TRUE, names.arg=resp, las=2, col=colors)
+runApp()

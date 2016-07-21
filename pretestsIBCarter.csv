@@ -1,0 +1,44 @@
+ID,Name,Q1,Q2,Q3,Q4,Q5,Q6,Q7,Q8,Q9,Q10,Q11,Q12,Q13,Q14,Q15,Q16,Q17,Q18,Q19,Q20,Q21
+1,"Baker, Paige","B, D",E,E,"C, E",A,D,C,D,E,A,C,A,D,"C, E","B, D",C,C,"C, D",C,C,E
+2,"Black, Emily","A, B",B,"C, E","A, D, E","A, B, C, D","A, C, D",C,E,E,"A, C","C, D",A,C,"C, E","B, D","B, C","A, B","A, B","B, D","C, D","B, C"
+3,"Acuna, Jacob",E,B,C ,"A, B, C, E",A ,"A, C, D",E,B,"B, E",A ,"B, E",B,C,C ,"B,C, D, E",C,"B, D","C, D","A, C","A, E","C, E"
+4,"Aloufi, Roa'a",D,E,C ,"A, E",A ,C,X,A,E,B,A,C,B,A,C,C,D,C,B ,D,C 
+5,"Bradshaw, Spencer",D,"B, D",E,"A, B, C, E","A, C",D,A,D,"C, D",A ,"B, C, E",C,C,E,D,"B, E","B, C","D, E","A, C, D","A, B, D","C, D, E"
+6,"Brown, Rashad","B, D",B ,"A, C","A, C, E",A,"A, C ",E ,E ,"C, D","B, C","C, E",B ,"A, C, D","C, D, E","A, C, E","A, C, E","B, D",X,X,X,X
+7,"Burns, Nic","B, D",B ,A ,"A, C, E","A, B, C ","A, D",E ,C,"A, C, D","A, C, E","A, B, E","B, D","A, C ","C, E","B, C, D","B, C, E","B, C, D","A, D, E","C, D","B, D, E","A, C, E"
+8,"Cavanaugh, Lennon",B ,B ,"A, E","C, E","A, B ","A, C ",E ,E ,E ,A ,"A, C, E ",A,C,C ,"B, D ",A ,"B, C ","D, E",C ,E,C 
+9,"Clements, Amelia",E,B ,E,"A, E",A ,C,E ,D,E ,"A, B, C","B, E",A,C,"C, E","B,C, D, E","C, E",A ,"A, E",C ,"D, E",C 
+10,"Chomiak, Kristina","A, B",B ,A ,"A, C, E","A, B, C, D","A, C ",X,D,X,A ,"C, D, E",B ,"C, D","C, E","B, C, E","B, C, E","B, C","C, D","A, C, D","C, D, E","A, B, C, D, E"
+11,"Emric, David","B, D",B ,A ,"C, E",A ,C,D,E ,A,A,"A, D",A,D,C,D,C ,B ,C ,C ,D,"B, C, E"
+12,"Eddy, Heather",B ,B ,C,"C, E","A, D","A, C ",D,"A, D","C, D","A, C","C, E",A,C ,"C, E",A ,"B, C","B, D","A, D ",C ,"A, E",C 
+13,"Ghoneim, Shareef",D,"B, C, E","A, D","A, C, E","A, C, D",D,A,D,C ,A ,"A, B, C, D, E",C,"A, C, D","C, D, E","B, C, D","A, D, E","B, C","D, E",C,"D, E","A, C, D, E"
+14,"Glover, Maryah","B, E",B ,C ,"A, C, E","A, B, D","A, C ",E ,"B, D, E",A ,"A, C","A, B, E",B ,"A, B, C","C, E","B, D, E","B, C, D, E","B, C, D","A, E",B ,"C, D","B, C, D, E"
+15,"Gambino, Kristen",A ,B ,E,"C, E",A ,"A, C",C,D,E ,A ,"A, B, E",D,"A, C ","C, D, E","C, D, E",E,"B, C ",D,"B, C ",E,C 
+16,"Howard, Jesse","C, D",B ,"A, D, E","A, C, E",A ,D,E,"A, B","B, C, D",A ,"A, C ",B ,A ,"D, E","B, D ","B, C",B ,"D, E",C ,"C, D, E",C 
+17,"Hruberky, Bright","B, D",B ,E ,"A, E",E,"A, C",E,A ,"B, C, D","A, C","A, E",B ,"B, D","C, E","B, D, E","B, E","B, C, D","C, E","A, B","C, D, E","C, E"
+18,"Jaimes, Gabriela","C, D",B ,"C, E","C, D, E","A, C, D","A, D","B, C","A, D","A, C, E","A, B ","C, E","A, C, D","A, C ","C, E","B, D, E","A, C ","B, C ","A, E","A, C ","C, E","A, D, E "
+19,"Kelly, Neil",B ,B ,"D, E","A, C, E","A, B, C, D",D,A,C,B ,A ,"A, B, C, D, E","A, B",C ,"A, B, C, D, E","A, B, D, E","B, C","B, C","D, E","A, C, D","A, D","D, E"
+20,"Koh, Celina",B ,E,D ,"A, C, E",A ,"A, C ",D,D,C ,B ,"A, E",E,C ,"C, E","B, C","B, C, E","B, D","D, E","C, D",E,"A, B"
+21,"Kim, Eric","B, D",B ,E ,"A, C, E","A, C, D",C,B,A,"C, D",A,"A, C ",B ,"A, C, D","A, C, E",C ,"B, C, E",B ,"D, E","A, B, C","B, D, E","C, D, E"
+22,"Kamai, Debrah",A ,B ,E ,"A, C, E",A ,D ,"B, C",D,E ,"A, C",C,B,D,"C, E","C, D ",C ,B ,X,X,X,X
+23,"Loumis, Zachey",D ,B ,E ,"A, C, E","A, B ",C,B ,B,E,A,"A, B, C, E",B ,"A, C, D",C,"B, D ",A ,"B, D","C, D",A ,"A, E","D, E"
+24,"Lee, Pheng","A, D",B ,B ,"A, C, E","A, D",C,E,D,E,A ,C ,C ,"C, D ","C, D ",B ,"C, E ","B, D",C ,C ,"B, D ",C 
+25,"McNamara, Carlie",B ,B ,C ,"A, C, E","A, B ","A, C ",D ,D ,E ,A ,"A, B, C, E",B ,"A, C, D","C, E","B, D, E","C, E ",B ,"A, C, D, E",C ,E ,"A, C, E"
+26,"Mohiuddin, Humayoun",C,B ,B ,D ,"A, C",A ,A ,A ,"C, D, E","A, C ","B, E","A, D ","A, C ","C, E","B,C, D, E","A, C ",B,A,"A, B, C","B, D, E","A, C, D, E"
+27,"Mohamed, Mohamed",B ,B ,C ,"A, C, E",A ,"C, D ",D ,B ,"C, D ","A, C ","C, E",B ,"A, C ","C, E","A, B, D ",A ,"B, C ","A, D ",A ,"A, E","C, D "
+28,"Nela, James ","B, C, D","B, E ","A, D","A, C, E","A, B, D","A, D","A, C","A, C, E","B, C, D",A ,"A, B, C, D, E",A ,"A, C, D","C, E","C, D ","B, C, E","A, B, C","D, E","A, B, C","D, E","A, C, E"
+29,"Navas, Darlene","A, B",B ,"A, C","A, C, D",A ,"A, C",D ,"A, C ","C, D ",A ,A ,"A, B ",D ,"C, E ","B, D ","C, D, E ","B, C ","C, E ",B ,E ,E 
+30,"Odea, Sean",B ,B ,"A, D ","A, C, D","A, B, C, D",D ,E ,"A, E ","C, D ","A, C ","A, C, D, E ",B ,"A, C, D","B, C, D, E",X,"A, C, D, E",X,"C, D, E",X,"A, D, E","C, D, E"
+31,"Pinzon, Juliana",B ,X,X,X,A ,C ,X,X,X,"A, C ",E ,X,B ,"C, E ","D, E ","B, C ","B, C ","D, E ",B ,X,X
+32,"Phyo, Ei Thinzar","B, C, D",B ,E,"A, C, E","A, C",C ,E ,A ,C ,"A, C ","A, C ",A  ,D ,"C, D, E","C, E ","B, C, E","B, C","A, C, E",A ,"D, E","A, C, E"
+33,"Pinkham, Arianna ","A, C",B ,E ,"A, C, E ",A ,"A, C ",C ,"D, E ","A, E ","A, C ","A, B, C ",A  ,"A, C, D","C, D, E","B,C, D, E","A, C, E","B, D","C, D, E","A, C ",A,"C, D "
+34,"Raut, Saminchka","A, B ",B ,C ,"A, C, E ","A, C ","A, C ",D,C,E ,E ,"A, C, E ",B ,"B, D","C, D ","B, D, E","B, C, E","A, B, D","A, E","A, C",E ,"C, E "
+35,"Saile, Mark",B ,B ,B ,"A, E",A ,C ,D ,D ,"C, D ",A ,"A, E","A, D ",C ,"C, E ","B, D, E ","B, C, E",A ,E ,"A, B ",E ,"A, C, E"
+36,"Sieber, Michelle ",B ,B ,D ,"A, B, C ",A ,C ,C ,D ,E ,"A, C","A, B, C, E",A ,"C, D ","C, E ","B, D, E",C ,"B, C ",A ,C ,"C, E ","A, C "
+37,"Stanislow, Krista",C ,B ,C ,"A, B, C, E",A ,A ,E ,C ,E ,A ,A ,C ,D ,D ,E ,C ,B ,D ,B ,D ,C 
+38,"Spencer, Laura ","C, D",B ,D ,"A, C, E","A, B, C, D","A, C",E ,B ,E ,X,E ,B ,C ,"C, E ","B,C, D, E","B, C, E","B, C",X,"A, B",X,C
+39,"Teal, Claire ",B ,B ,D ,"A, B, C, E",A ,"A, C",C ,C ,"C, E ",A ,"A, D",A ,C ,"C, E ","B, D ","D, E",B ,D ,"B, C ",E ,"A, C, D "
+40,"Vedacek, Mason","C, D",B ,E ,"A, E","A, C, D",D ,A ,"A, D ",C ,"A, C","A, C ",A ,"C, D ","C, E ","B, D ","B, D, E","B, C ","D, E ","A, C ","A, D ","A, C, E"
+41,"Xie, Jianying ",A ,E ,D ,"A, C, D, E",A ,"A, C, D",C ,C ,"C, D, E","A, C ","B, C, E",A ,"A, D ","C, D, E","C, D ","A, C","A, B, D","A, C, D ","A, C ",D ,"C, E "
+42,"Zhang, Tony","A, B",B ,E ,"A, C, E ",A ,C ,C ,D ,B ,"A, B ","A, B, E",B ,"A, C, D","C, E ","D, E ","C, E",B ,"A, D, E","A, C","A, D","A, C "
+43,"Zhang, Wenbing ",X,X,X,E,A ,"A, C","B, C",X,X,"A, B ","A, B, D",X,X,X,X,X,X,X,X,X,X

@@ -1,0 +1,512 @@
+Ascores <- c(Ascores, scoreABS(AnswerData[a,]))
+Pscores <- c(Pscores, scorePRT(AnswerData[a,]))
+}
+scorePRTtable <-table(Pscores)
+scoreABStable <-table(Ascores)
+barplot(scoreABStable,space=1, main="Absolute Scores", col="red")
+barplot(scorePRTtable,space=1, main="Partial Scores", col="blue")
+hist(
+Pscores,
+breaks=40,
+col="blue",
+xlim=c(0,100),
+ylim=c(0,500),
+main="Histogram of Absolute and Partial Scores",
+ylab="Number of Students",
+xlab="Absolute Score (Green) Partial Score (Blue)")
+hist(
+Ascores,
+breaks=36 ,
+add=T,
+col=rgb(0, 1, 0, 0.5),
+xlim=c(0,100),
+main="Histogram of Absolute and Partial Scores",
+xlab="Absolute Score")
+qPlot <- function(question, crop=7){
+table <- sort(table(AnswerData[question]))
+print(table)
+table <-(tail(table,crop))
+cols <- c("red","blue")
+correct <- names(table) == key$Ans[question]
+title <- paste("Question",as.character(question+2))
+barplot(table, main=title, col=cols[correct+1] , xlab = "Answer", ylab="Frequency")
+}
+Pscores
+sort(Pscores)
+mean(Pscores)
+quantile(Pscores)
+#Read in the csv file containing the data, in order for this command
+#to work, the csv file must be saved in the working directory, the folder that this
+# rbeta program is saved in.
+Beta  <- read.csv("Beta-testers-raw-data-CommaD.csv", header= TRUE, sep= "," )
+York  <- read.csv("PRE-test-york-raw-data-CommaD.csv", header= TRUE, sep= "," )
+CDCI4 <- read.csv("CDCI-04.csv", header= TRUE, sep= "," )
+CDCI5 <- read.csv("CDCI-05post.csv", header= TRUE, sep= "," )
+Wright <- read.csv("Wright2015.csv", header= TRUE, sep= "," )
+# This command trims of the unnecessary columns that don't contain answer data
+CDCI4 <-CDCI4[8:31]
+Wright <- Wright[3:26]
+CDCI5 <- CDCI5[9:32]
+York <- York[4:27]
+Beta <- Beta[4:27]
+DataSet <- c(CDCI4, CDCI5, York, Beta, Wright)
+AnswerData <- rbind(CDCI4, CDCI5, York, Beta, Wright)
+AnswerData <- as.data.frame(
+lapply(AnswerData,function(x)
+if(is.character(x)|is.factor(x)){
+gsub(",","",x)
+}else x))
+AnswerData <- as.data.frame(
+lapply(AnswerData,function(x)
+if(is.character(x)|is.factor(x)){
+gsub("\\(","",x)
+}else x))
+AnswerData <- as.data.frame(
+lapply(AnswerData,function(x)
+if(is.character(x)|is.factor(x)){
+gsub(")","",x)
+}else x))
+Ans <- c("AD", "BE", "A", "A", "CD" , "ABCD", "A" , "C" , "AC"
+,"AB" , "A", "AC" , "CD" , "ABD" , "BD", "B", "CD" , "B" , "A" , "A" , "B" ,
+"C" , "A", "ABCD" )
+numAns <- c(5,5,3,3,4, 4,4,4,4,3, 4,5,5,4,4, 4,5,4,3,4, 3,4,4,4)
+key <- data.frame(Ans,numAns)
+scoreABS <- function(answers){
+score <- 0
+for( a in 1:length(answers)){
+if (as.character( answers[1,a]) == as.character(key$Ans[a])){
+score <- score + 1
+}
+}
+score <- round(100*score/length(answers),2)
+#print(paste("Absolute score ",score, "%",sep=""))
+return(score)
+}
+scorePRT <- function(answers){
+maxScore <- sum(key$numAns)
+qScores <- c()
+for(question in 1:length(AnswerData)){
+qScoreMax <- key$numAns[question]
+qScore <- qScoreMax
+given <- as.character( answers[1,question])
+correct <- as.character(key$Ans[question])
+for(char in 1:nchar(correct)){
+corr <- substr(correct, char, char)
+if(!grepl(corr,given)){
+qScore = qScore - 1
+}
+}
+for(char in 1:nchar(given)){
+give <- substr(given, char, char)
+if(!grepl(give,correct)){
+qScore = qScore - 1
+}
+}
+qScores <- c(qScores, qScore)
+}
+score <- sum(qScores)
+return(round(100*score/maxScore,2))
+}
+Ascores <- c()
+Pscores <- c()
+for ( a in 1:length(AnswerData[,1])){
+Ascores <- c(Ascores, scoreABS(AnswerData[a,]))
+Pscores <- c(Pscores, scorePRT(AnswerData[a,]))
+}
+scorePRTtable <-table(Pscores)
+scoreABStable <-table(Ascores)
+barplot(scoreABStable,space=1, main="Absolute Scores", col="red")
+barplot(scorePRTtable,space=1, main="Partial Scores", col="blue")
+hist(
+Pscores,
+breaks=40,
+col="blue",
+xlim=c(0,100),
+ylim=c(0,500),
+main="Histogram of Absolute and Partial Scores",
+ylab="Number of Students",
+xlab="Absolute Score (Green) Partial Score (Blue)")
+hist(
+Ascores,
+breaks=36 ,
+add=T,
+col=rgb(0, 1, 0, 0.5),
+xlim=c(0,100),
+main="Histogram of Absolute and Partial Scores",
+xlab="Absolute Score")
+qPlot <- function(question, crop=7){
+table <- sort(table(AnswerData[question]))
+print(table)
+table <-(tail(table,crop))
+cols <- c("red","blue")
+correct <- names(table) == key$Ans[question]
+title <- paste("Question",as.character(question+2))
+barplot(table, main=title, col=cols[correct+1] , xlab = "Answer", ylab="Frequency")
+}
+P
+quantile(Pscores)
+mean(Pscores)
+length(Pscores)
+sort(Pscores)
+rnorm(2630)
+lapply (rnorm(2630), function(x){x = x*2})
+lapply (rnorm(2630), function(x){if(x <=0 ){x = x*-1}})
+lapply (rnorm(2630), function(x){if(x <=0 ){x = x*-1}else{x=x}})
+N <- lapply (rnorm(2630), function(x){if(x <=0 ){x = x*-1}else{x=x}})
+head(N)
+barplot(N)
+hist(N)
+N
+q()
+q()
+DataSet <- c(CDCI4, CDCI5, York, Beta, Wright)
+#Read in the csv file containing the data, in order for this command
+#to work, the csv file must be saved in the working directory, the folder that this
+# rbeta program is saved in.
+Beta  <- read.csv("Beta-testers-raw-data-CommaD.csv", header= TRUE, sep= "," )
+York  <- read.csv("PRE-test-york-raw-data-CommaD.csv", header= TRUE, sep= "," )
+CDCI4 <- read.csv("CDCI-04.csv", header= TRUE, sep= "," )
+CDCI5 <- read.csv("CDCI-05post.csv", header= TRUE, sep= "," )
+Wright <- read.csv("Wright2015.csv", header= TRUE, sep= "," )
+# This command trims of the unnecessary columns that don't contain answer data
+CDCI4 <-CDCI4[8:31]
+Wright <- Wright[3:26]
+CDCI5 <- CDCI5[9:32]
+York <- York[4:27]
+Beta <- Beta[4:27]
+DataSet <- c(CDCI4, CDCI5, York, Beta, Wright)
+AnswerData <- rbind(CDCI4, CDCI5, York, Beta, Wright)
+AnswerData <- as.data.frame(
+lapply(AnswerData,function(x)
+if(is.character(x)|is.factor(x)){
+gsub(",","",x)
+}else x))
+AnswerData <- as.data.frame(
+lapply(AnswerData,function(x)
+if(is.character(x)|is.factor(x)){
+gsub("\\(","",x)
+}else x))
+AnswerData <- as.data.frame(
+lapply(AnswerData,function(x)
+if(is.character(x)|is.factor(x)){
+gsub(")","",x)
+}else x))
+Ans <- c("AD", "BE", "A", "A", "CD" , "ABCD", "A" , "C" , "AC"
+,"AB" , "A", "AC" , "CD" , "ABD" , "BD", "B", "CD" , "B" , "A" , "A" , "B" ,
+"C" , "A", "ABCD" )
+numAns <- c(5,5,3,3,4, 4,4,4,4,3, 4,5,5,4,4, 4,5,4,3,4, 3,4,4,4)
+key <- data.frame(Ans,numAns)
+scoreABS <- function(answers){
+score <- 0
+for( a in 1:length(answers)){
+if (as.character( answers[1,a]) == as.character(key$Ans[a])){
+score <- score + 1
+}
+}
+score <- round(100*score/length(answers),2)
+#print(paste("Absolute score ",score, "%",sep=""))
+return(score)
+}
+scorePRT <- function(answers){
+maxScore <- sum(key$numAns)
+qScores <- c()
+for(question in 1:length(AnswerData)){
+qScoreMax <- key$numAns[question]
+qScore <- qScoreMax
+given <- as.character( answers[1,question])
+correct <- as.character(key$Ans[question])
+for(char in 1:nchar(correct)){
+corr <- substr(correct, char, char)
+if(!grepl(corr,given)){
+qScore = qScore - 1
+}
+}
+for(char in 1:nchar(given)){
+give <- substr(given, char, char)
+if(!grepl(give,correct)){
+qScore = qScore - 1
+}
+}
+qScores <- c(qScores, qScore)
+}
+score <- sum(qScores)
+return(round(100*score/maxScore,2))
+}
+Ascores <- c()
+Pscores <- c()
+for ( a in 1:length(AnswerData[,1])){
+Ascores <- c(Ascores, scoreABS(AnswerData[a,]))
+Pscores <- c(Pscores, scorePRT(AnswerData[a,]))
+}
+scorePRTtable <-table(Pscores)
+scoreABStable <-table(Ascores)
+barplot(scoreABStable,space=1, main="Absolute Scores", col="red")
+barplot(scorePRTtable,space=1, main="Partial Scores", col="blue")
+hist(
+Pscores,
+breaks=40,
+col="blue",
+xlim=c(0,100),
+ylim=c(0,500),
+main="Histogram of Absolute and Partial Scores",
+ylab="Number of Students",
+xlab="Absolute Score (Green) Partial Score (Blue)")
+hist(
+Ascores,
+breaks=36 ,
+add=T,
+col=rgb(0, 1, 0, 0.5),
+xlim=c(0,100),
+main="Histogram of Absolute and Partial Scores",
+xlab="Absolute Score")
+qPlot <- function(question, crop=7){
+table <- sort(table(AnswerData[question]))
+print(table)
+table <-(tail(table,crop))
+cols <- c("red","blue")
+correct <- names(table) == key$Ans[question]
+title <- paste("Question",as.character(question+2))
+barplot(table, main=title, col=cols[correct+1] , xlab = "Answer", ylab="Frequency")
+}
+hist(
+Pscores,
+breaks=40,
+col="blue",
+xlim=c(0,100),
+ylim=c(0,500),
+main="Histogram of Absolute and Partial Scores",
+ylab="Number of Students",
+xlab="Absolute Score (Green) Partial Score (Blue)")
+hist(
+Ascores,
+breaks=36 ,
+add=T,
+col=rgb(0, 1, 0, 0.5),
+xlim=c(0,100),
+main="Histogram of Absolute and Partial Scores",
+xlab="Absolute Score")
+qPlot(1)
+#Read in the csv file containing the data, in order for this command
+#to work, the csv file must be saved in the working directory, the folder that this
+# rbeta program is saved in.
+Beta  <- read.csv("Beta-testers-raw-data-CommaD.csv", header= TRUE, sep= "," )
+York  <- read.csv("PRE-test-york-raw-data-CommaD.csv", header= TRUE, sep= "," )
+CDCI4 <- read.csv("CDCI-04.csv", header= TRUE, sep= "," )
+CDCI5 <- read.csv("CDCI-05post.csv", header= TRUE, sep= "," )
+Wright <- read.csv("Wright2015.csv", header= TRUE, sep= "," )
+# This command trims of the unnecessary columns that don't contain answer data
+CDCI4 <-CDCI4[8:31]
+Wright <- Wright[3:26]
+CDCI5 <- CDCI5[9:32]
+York <- York[4:27]
+Beta <- Beta[4:27]
+DataSet <- c(CDCI4, CDCI5, York, Beta, Wright)
+AnswerData <- rbind(CDCI4, CDCI5, York, Beta, Wright)
+AnswerData <- as.data.frame(
+lapply(AnswerData,function(x)
+if(is.character(x)|is.factor(x)){
+gsub(",","",x)
+}else x))
+AnswerData <- as.data.frame(
+lapply(AnswerData,function(x)
+if(is.character(x)|is.factor(x)){
+gsub("\\(","",x)
+}else x))
+AnswerData <- as.data.frame(
+lapply(AnswerData,function(x)
+if(is.character(x)|is.factor(x)){
+gsub(")","",x)
+}else x))
+Ans <- c("AD", "BE", "A", "A", "CD" , "ABCD", "A" , "C" , "AC"
+,"AB" , "A", "AC" , "CD" , "ABD" , "BD", "B", "CD" , "B" , "A" , "A" , "B" ,
+"C" , "A", "ABCD" )
+numAns <- c(5,5,3,3,4, 4,4,4,4,3, 4,5,5,4,4, 4,5,4,3,4, 3,4,4,4)
+key <- data.frame(Ans,numAns)
+scoreABS <- function(answers){
+score <- 0
+for( a in 1:length(answers)){
+if (as.character( answers[1,a]) == as.character(key$Ans[a])){
+score <- score + 1
+}
+}
+score <- round(100*score/length(answers),2)
+#print(paste("Absolute score ",score, "%",sep=""))
+return(score)
+}
+scorePRT <- function(answers){
+maxScore <- sum(key$numAns)
+qScores <- c()
+for(question in 1:length(AnswerData)){
+qScoreMax <- key$numAns[question]
+qScore <- qScoreMax
+given <- as.character( answers[1,question])
+correct <- as.character(key$Ans[question])
+for(char in 1:nchar(correct)){
+corr <- substr(correct, char, char)
+if(!grepl(corr,given)){
+qScore = qScore - 1
+}
+}
+for(char in 1:nchar(given)){
+give <- substr(given, char, char)
+if(!grepl(give,correct)){
+qScore = qScore - 1
+}
+}
+qScores <- c(qScores, qScore)
+}
+score <- sum(qScores)
+return(round(100*score/maxScore,2))
+}
+Ascores <- c()
+Pscores <- c()
+for ( a in 1:length(AnswerData[,1])){
+Ascores <- c(Ascores, scoreABS(AnswerData[a,]))
+Pscores <- c(Pscores, scorePRT(AnswerData[a,]))
+}
+scorePRTtable <-table(Pscores)
+scoreABStable <-table(Ascores)
+barplot(scoreABStable,space=1, main="Absolute Scores", col="red")
+barplot(scorePRTtable,space=1, main="Partial Scores", col="blue")
+hist(
+Pscores,
+breaks=40,
+col="blue",
+xlim=c(0,100),
+ylim=c(0,500),
+main="Histogram of Absolute and Partial Scores",
+ylab="Number of Students",
+xlab="Absolute Score (Green) Partial Score (Blue)")
+hist(
+Ascores,
+breaks=36 ,
+add=T,
+col=rgb(0, 1, 0, 0.5),
+xlim=c(0,100),
+main="Histogram of Absolute and Partial Scores",
+xlab="Absolute Score")
+qPlot <- function(question, crop=7){
+table <- sort(table(AnswerData[question]))
+print(table)
+table <-(tail(table,crop))
+cols <- c("red","blue")
+correct <- names(table) == key$Ans[question]
+title <- paste("Question",as.character(question+2))
+barplot(table, main=title, col=cols[correct+1] , xlab = "Answer", ylab="Frequency")
+}
+getwd()
+setwd("C:/Users/Amy/Google Drive/Academic/CDCI/Analysis")
+getwd()
+setwd("C:/Users/Amy/Google Drive/Academic/CDCI/Analysis")
+#Read in the csv file containing the data, in order for this command
+#to work, the csv file must be saved in the working directory, the folder that this
+# rbeta program is saved in.
+Beta  <- read.csv("Beta-testers-raw-data-CommaD.csv", header= TRUE, sep= "," )
+York  <- read.csv("PRE-test-york-raw-data-CommaD.csv", header= TRUE, sep= "," )
+CDCI4 <- read.csv("CDCI-04.csv", header= TRUE, sep= "," )
+CDCI5 <- read.csv("CDCI-05post.csv", header= TRUE, sep= "," )
+Wright <- read.csv("Wright2015.csv", header= TRUE, sep= "," )
+# This command trims of the unnecessary columns that don't contain answer data
+CDCI4 <-CDCI4[8:31]
+Wright <- Wright[3:26]
+CDCI5 <- CDCI5[9:32]
+York <- York[4:27]
+Beta <- Beta[4:27]
+DataSet <- c(CDCI4, CDCI5, York, Beta, Wright)
+AnswerData <- rbind(CDCI4, CDCI5, York, Beta, Wright)
+AnswerData <- as.data.frame(
+lapply(AnswerData,function(x)
+if(is.character(x)|is.factor(x)){
+gsub(",","",x)
+}else x))
+AnswerData <- as.data.frame(
+lapply(AnswerData,function(x)
+if(is.character(x)|is.factor(x)){
+gsub("\\(","",x)
+}else x))
+AnswerData <- as.data.frame(
+lapply(AnswerData,function(x)
+if(is.character(x)|is.factor(x)){
+gsub(")","",x)
+}else x))
+Ans <- c("AD", "BE", "A", "A", "CD" , "ABCD", "A" , "C" , "AC"
+,"AB" , "A", "AC" , "CD" , "ABD" , "BD", "B", "CD" , "B" , "A" , "A" , "B" ,
+"C" , "A", "ABCD" )
+numAns <- c(5,5,3,3,4, 4,4,4,4,3, 4,5,5,4,4, 4,5,4,3,4, 3,4,4,4)
+key <- data.frame(Ans,numAns)
+scoreABS <- function(answers){
+score <- 0
+for( a in 1:length(answers)){
+if (as.character( answers[1,a]) == as.character(key$Ans[a])){
+score <- score + 1
+}
+}
+score <- round(100*score/length(answers),2)
+#print(paste("Absolute score ",score, "%",sep=""))
+return(score)
+}
+scorePRT <- function(answers){
+maxScore <- sum(key$numAns)
+qScores <- c()
+for(question in 1:length(AnswerData)){
+qScoreMax <- key$numAns[question]
+qScore <- qScoreMax
+given <- as.character( answers[1,question])
+correct <- as.character(key$Ans[question])
+for(char in 1:nchar(correct)){
+corr <- substr(correct, char, char)
+if(!grepl(corr,given)){
+qScore = qScore - 1
+}
+}
+for(char in 1:nchar(given)){
+give <- substr(given, char, char)
+if(!grepl(give,correct)){
+qScore = qScore - 1
+}
+}
+qScores <- c(qScores, qScore)
+}
+score <- sum(qScores)
+return(round(100*score/maxScore,2))
+}
+Ascores <- c()
+Pscores <- c()
+for ( a in 1:length(AnswerData[,1])){
+Ascores <- c(Ascores, scoreABS(AnswerData[a,]))
+Pscores <- c(Pscores, scorePRT(AnswerData[a,]))
+}
+scorePRTtable <-table(Pscores)
+scoreABStable <-table(Ascores)
+barplot(scoreABStable,space=1, main="Absolute Scores", col="red")
+barplot(scorePRTtable,space=1, main="Partial Scores", col="blue")
+hist(
+Pscores,
+breaks=40,
+col="blue",
+xlim=c(0,100),
+ylim=c(0,500),
+main="Histogram of Absolute and Partial Scores",
+ylab="Number of Students",
+xlab="Absolute Score (Green) Partial Score (Blue)")
+hist(
+Ascores,
+breaks=36 ,
+add=T,
+col=rgb(0, 1, 0, 0.5),
+xlim=c(0,100),
+main="Histogram of Absolute and Partial Scores",
+xlab="Absolute Score")
+qPlot <- function(question, crop=7){
+table <- sort(table(AnswerData[question]))
+print(table)
+table <-(tail(table,crop))
+cols <- c("red","blue")
+correct <- names(table) == key$Ans[question]
+title <- paste("Question",as.character(question+2))
+barplot(table, main=title, col=cols[correct+1] , xlab = "Answer", ylab="Frequency")
+}
+Pscores
+sort(Pscores)
+sessionInfo()
+rstudio::versionInfo()
