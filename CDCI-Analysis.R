@@ -106,7 +106,7 @@ groom <- function( AnswerData, myKey = key)
 	return(AnswerData)
 	}
 
-
+# generate scores treating each question as a binary correct / incorrect
 scoreABS <- function(answers, focus=0, selection = c(1:length(answers)), myKey = key){
 	qScores <- c()
 	score <- 0 
@@ -131,7 +131,8 @@ scoreABS <- function(answers, focus=0, selection = c(1:length(answers)), myKey =
 	if(invalid){ score <- -1}
 	return(c(score, qScores))	
 	}
-
+# generate scores so that the final score for each question is a fractionn representing the number of
+# correct answer choices		
 scorePRT <- function(answers, df=prtFrame, myKey = key){
 	maxScore <- sum(myKey$numAns)
 	qScores <- c()
@@ -161,7 +162,8 @@ scorePRT <- function(answers, df=prtFrame, myKey = key){
 	if (invalid) { score <- -1}
 	return(c(score, qScores))
 }
-
+# transform a string containingchosen answers into a binary string containing a 1 for each chosen answer and a 0 
+# 0 for each chosen answer. 		
 binarize <- function(string, N)
 	{
 	binary <- rep(0,N)
@@ -171,7 +173,7 @@ binarize <- function(string, N)
 		}
 	return(binary)
 	}
-
+# generates scores so that each answer choice is treated as a separate true false 
 scoreTF <- function(answers, df=prtFrame, myKey = key)
 	{
 	maxScore <- sum(key$numAns)
@@ -200,7 +202,7 @@ scoreTF <- function(answers, df=prtFrame, myKey = key)
 	if (invalid) { score <- -1}
 	return(c(score, qScores))
 	}
-
+# produce a bar plot displaying the most common answers, the correct answer is highlighted in blue
 qPlot <- function(AnswerData, question, crop=7, myKey = key)
 	{
 	these <- groom(AnswerData)[question]
@@ -239,7 +241,7 @@ getD <- function(question, max=FALSE)
 	Lcorrect <- (sum(B)- B[1])/sum(B)
 	return(Ucorrect - Lcorrect)
 	}
-
+# implementation of the Cohens D distance algorithm 
 cohens_d <- function(x, y) 
 	{
         lx <- length(x)- 1
@@ -250,7 +252,7 @@ cohens_d <- function(x, y)
         csd <- sqrt(csd)                     ## common sd computation
         cd  <- md/csd                        ## cohen's d
 	}
-
+# apply scorePRT to a collection of answer sets
 getPRT <- function(data, cull = T, myKey = key)
 	{
 	  Prtscores <- c()
@@ -267,7 +269,7 @@ getPRT <- function(data, cull = T, myKey = key)
 	  if (cull) prtFrame <- prtFrame[!(prtFrame$Prtscores < 0),] 
 	  return(prtFrame)
 	}
-
+# apply scoreAbs to a collection of answer sets
 getAbs <- function(data, cull = T, myKey =  key)
 	{
 	Absscores <- c()
@@ -285,7 +287,7 @@ getAbs <- function(data, cull = T, myKey =  key)
 	if (cull) absFrame <- absFrame[!(absFrame$Absscores < 0),] 
 	return(absFrame)
 	}
-
+# apply scoreTF to a collection of answer sets
 getTF <- function(data, cull = T, myKey = key)
 	{
 	TFscores <- c()
